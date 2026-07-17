@@ -114,7 +114,9 @@ const reasonsList = document.querySelector("#reasons-list");
 reasons.forEach(([number, text], index) => {
   const entry = document.createElement("article");
   entry.className = `reason-entry${number === "100" ? " final-reason" : ""}`;
-  entry.innerHTML = `<div class="reason-card"><small>Reason ${number.padStart(2, "0")}</small><h3>${text}</h3></div><div class="reason-marker">${number}</div><div class="reason-icon" aria-hidden="true">${symbols[index % symbols.length]}</div>`;
+  entry.innerHTML = `<div class="reason-card"><small>Reason ${number.padStart(2, "0")}</small><h3>${text}</h3></div><div 
+                          class="reason-marker">${number}</div><div 
+                          class="reason-icon" aria-hidden="true">${symbols[index % symbols.length]}</div>`;
   reasonsList.appendChild(entry);
 });
 
