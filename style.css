@@ -1,12 +1,53 @@
-:root {
-  --ivory:#fcf8f3;--cream:#f7f3ee;--rose:#b77a86;--mauve:#a77482;--blush:#efd8da;
-  --espresso:#3b2b2b;--charcoal:#4a3939;--gold:#d6b98a;--white:#fff;
-  --display:'Playfair Display',serif;--serif:'Cormorant Garamond',serif;--body:'EB Garamond',serif;
-  --script:'Great Vibes',cursive;--hand:'Caveat',cursive;
+:root 
+{
+  --ivory:#fcf8f3;
+  --cream:#f7f3ee;
+  --rose:#b77a86;
+  --mauve:#a77482;
+  --blush:#efd8da;
+  --espresso:#3b2b2b;
+  --charcoal:#4a3939;
+  --gold:#d6b98a;
+  --white:#fff;
+  --display:'Playfair Display',serif;
+  --serif:'Cormorant Garamond',serif;
+  --body:'EB Garamond',serif;
+  --script:'Great Vibes',cursive;
+  --hand:'Caveat',cursive;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--ivory)}body{margin:0;color:var(--espresso);font-family:var(--serif);background:var(--ivory);overflow-x:hidden}button,a{font:inherit}button{color:inherit}::selection{background:var(--blush);color:var(--espresso)}
-.grain{position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E")}
-.ambient-particles{position:fixed;inset:0;pointer-events:none;z-index:30;background-image:radial-gradient(circle,#fff 0 1px,transparent 1.6px),radial-gradient(circle,var(--gold) 0 .7px,transparent 1.3px);background-size:97px 113px,151px 179px;background-position:13px 27px,41px 73px;opacity:.28;animation:particles 22s linear infinite}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ivory)}
+body{margin:0;color:var(--espresso);
+     font-family:var(--serif);
+     background:var(--ivory);
+     overflow-x:hidden}button,a{font:inherit}
+button{color:inherit}::selection
+{background:var(--blush);color:var(--espresso)}
+
+.grain{position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.15;background-image:url
+  ("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter
+  id='n'%3E%3CfeTurbulence
+  type='fractalNoise' 
+  baseFrequency='.85' 
+  numOctaves='3' 
+  stitchTiles='stitch'/%3E%3C/filter%3E%3Crect 
+  width='100%25' 
+  height='100%25' 
+  filter='url(%23n)' 
+  opacity='.16'/%3E%3C/svg%3E")}
+
+.ambient-particles 
+{
+  position:fixed;
+  inset:0;pointer-events:none;
+  z-index:30;background-image:
+    radial-gradient(circle,#fff 0 1px,transparent 1.6px),
+    radial-gradient(circle,var(--gold) 0 .7px,transparent 1.3px);
+  background-size:97px 113px,151px 179px;
+  background-position:13px 27px,41px 73px;
+  opacity:.28;
+  animation:particles 22s linear infinite
+}
 @keyframes particles{to{transform:translate3d(0,-80px,0)}}
 .site-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,64px);background:linear-gradient(180deg,rgba(252,248,243,.85),rgba(252,248,243,.05));backdrop-filter:blur(10px);transition:.4s}.site-header.over-dark{color:#fff;background:linear-gradient(180deg,rgba(7,16,37,.72),transparent)}
 .monogram{text-decoration:none;color:inherit;font-family:var(--display);font-size:1.3rem;letter-spacing:.08em}.monogram span{font-size:.8em;color:var(--rose)}.chapter-nav{display:flex;gap:clamp(16px,2vw,34px)}.chapter-nav a{position:relative;color:inherit;text-decoration:none;font-size:.72rem;letter-spacing:.2em;padding:8px 2px;opacity:.55;transition:.3s}.chapter-nav a::after{content:"";position:absolute;left:0;right:20%;bottom:3px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:.35s}.chapter-nav a:hover,.chapter-nav a.active{opacity:1}.chapter-nav a:hover::after,.chapter-nav a.active::after{transform:scaleX(1)}.nav-toggle{display:none;border:0;background:none;width:40px;height:40px}.nav-toggle span{display:block;width:20px;height:1px;background:currentColor;margin:6px auto;transition:.3s}
